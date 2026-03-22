@@ -9,9 +9,9 @@ Catatan mikrotik lunacomp
 # Created By: buananet.com - fb.me/buananet.pbun
 #########################################################
 /ip firewall address-list
-add list=LOCAL-IP address=10.0.0.0/8 comment="Routing Games by buananet.com"
-add list=LOCAL-IP address=172.16.0.0/12 comment="Routing Games by buananet.com"
-add list=LOCAL-IP address=192.168.0.0/16 comment="Routing Games by buananet.com"
+add list=CLIENT address=10.0.0.0/8 comment="Routing Games by buananet.com"
+add list=CLIENT address=172.16.0.0/12 comment="Routing Games by buananet.com"
+add list=CLIENT address=192.168.0.0/16 comment="Routing Games by buananet.com"
 /ip route
 add gateway=192.168.18.1 routing-mark=routing-game comment="Routing Games by buananet.com"
 /ip firewall mangle

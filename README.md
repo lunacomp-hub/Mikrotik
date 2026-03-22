@@ -40,6 +40,9 @@ add action=add-dst-to-address-list address-list="List-IP-Games" address-list-tim
 add action=add-dst-to-address-list address-list="List-IP-Games" address-list-timeout=1d chain=prerouting comment="Free Fire - Mobile" dst-address-list=!LOCAL-IP dst-port=6006,6674,7006,7889,8001-8012,9006,9137,10000-10012,11000-11019 protocol=tcp
 add action=add-dst-to-address-list address-list="List-IP-Games" address-list-timeout=1d chain=prerouting dst-address-list=!LOCAL-IP dst-port=12006,12008,13006,15006,20561,39003,39006,39698,39779,39800 protocol=tcp
 add action=add-dst-to-address-list address-list="List-IP-Games" address-list-timeout=1d chain=prerouting dst-address-list=!LOCAL-IP dst-port=6006,6008,7008,8008,8130,8443,9008,9120,10000-10015,10100,11000-11019,12008,13008 protocol=udp
+# Genshin Impact - Mobile
+add action=add-dst-to-address-list address-list="List-IP-Games" address-list-timeout=1d chain=prerouting comment="Genshin Impact - Mobile" dst-address-list=!LOCAL-IP dst-port=42472 protocol=tcp
+add action=add-dst-to-address-list address-list="List-IP-Games" address-list-timeout=1d chain=prerouting dst-address-list=!LOCAL-IP dst-port=42472,22101-22102 protocol=udp
 # Minecraft - Mobile
 add action=add-dst-to-address-list address-list="List-IP-Games" address-list-timeout=1d chain=prerouting comment="Minecraft - Mobile" dst-address-list=!LOCAL-IP dst-port=25565,19132-19133 protocol=tcp
 add action=add-dst-to-address-list address-list="List-IP-Games" address-list-timeout=1d chain=prerouting dst-address-list=!LOCAL-IP dst-port=25565,19132-19133 protocol=udp
@@ -58,4 +61,3 @@ add action=add-dst-to-address-list address-list="List-IP-Games" address-list-tim
 # Roblox - Mobile
 add action=add-dst-to-address-list address-list="List-IP-Games" address-list-timeout=1d chain=prerouting comment="Roblox - Mobile" dst-address-list=!LOCAL-IP dst-port=3074 protocol=tcp
 add action=add-dst-to-address-list address-list="List-IP-Games" address-list-timeout=1d chain=prerouting dst-address-list=!LOCAL-IP dst-port=88,500,3074,3544,4500,49152-65535 protocol=udp
-```

@@ -61,3 +61,73 @@ add action=add-dst-to-address-list address-list="List-IP-Games" address-list-tim
 # Roblox - Mobile
 add action=add-dst-to-address-list address-list="List-IP-Games" address-list-timeout=1d chain=prerouting comment="Roblox - Mobile" dst-address-list=!LOCAL-IP dst-port=3074 protocol=tcp
 add action=add-dst-to-address-list address-list="List-IP-Games" address-list-timeout=1d chain=prerouting dst-address-list=!LOCAL-IP dst-port=88,500,3074,3544,4500,49152-65535 protocol=udp
+
+
+```
+# STATIC ROUTING GAMES USING MANGLE PORT
+
+```
+###################################################################
+# Static Routing Games Using Mangle port Generator By buananet.com
+# Date/Time: 3/23/2026, 1:06:54 PM
+# Created By: buananet.com - fb.me/buananet.pbun
+###################################################################
+/ip firewall address-list
+add list=LOCAL-IP address=10.0.0.0/8 comment="Routing Games by buananet.com"
+add list=LOCAL-IP address=172.16.0.0/12 comment="Routing Games by buananet.com"
+add list=LOCAL-IP address=192.168.0.0/16 comment="Routing Games by buananet.com"
+/ip route
+add gateway=192.168.18.1 routing-mark=routing-game comment="Routing Games by buananet.com"
+##############################################################
+# If you want to add a game script only, you can ignore the script above
+##############################################################
+/ip firewall mangle
+# Arena Of Valor - Mobile
+add action=mark-routing chain=prerouting comment="Arena Of Valor - Mobile" new-routing-mark=routing-game passthrough=no dst-port=10001-10094 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=10101-10201,10080-10110,17000-18000 protocol=udp
+# Clash Of Clans - Mobile
+add action=mark-routing chain=prerouting comment="Clash Of Clans - Mobile" new-routing-mark=routing-game passthrough=no dst-port=9330-9340 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=9330-9340 protocol=udp
+# Clash Royale (Cry) - Mobile
+add action=mark-routing chain=prerouting comment="Clash Royale (Cry) - Mobile" new-routing-mark=routing-game passthrough=no dst-port=9330-9340 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=9330-9340 protocol=udp
+# Call Of Duty - Mobile
+add action=mark-routing chain=prerouting comment="Call Of Duty - Mobile" new-routing-mark=routing-game passthrough=no dst-port=3013,10000-10019,18082,50000,65010,65050 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=7085-7995,8700,9030,10010-10019,17000-20100 protocol=udp
+# DOTA2 - Mobile
+add action=mark-routing chain=prerouting comment="DOTA2 - Mobile" new-routing-mark=routing-game passthrough=no dst-port=9100-9200,8230-8250,8110-8120,27000-28998 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=27000-28998,39000 protocol=udp
+# FIFA ONLINE - Mobile
+add action=mark-routing chain=prerouting comment="FIFA ONLINE - Mobile" new-routing-mark=routing-game passthrough=no dst-port=7770-7790 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=16300-16350 protocol=udp
+# Free Fire - Mobile
+add action=mark-routing chain=prerouting comment="Free Fire - Mobile" new-routing-mark=routing-game passthrough=no dst-port=6006,6674,7006,7889,8001-8012,9006,9137,10000-10012,11000-11019 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=12006,12008,13006,15006,20561,39003,39006,39698,39779,39800 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=6006,6008,7008,8008,8130,8443,9008,9120,10000-10015,10100,11000-11019,12008,13008 protocol=udp
+# Genshin Impact - Mobile
+add action=mark-routing chain=prerouting comment="Genshin Impact - Mobile" new-routing-mark=routing-game passthrough=no dst-port=42472 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=42472,22101-22102 protocol=udp
+# League of Legends (LOL) - Mobile
+add action=mark-routing chain=prerouting comment="League of Legends - Mobile" new-routing-mark=routing-game passthrough=no dst-port=2080-2099 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=5100 protocol=udp
+# Minecraft - Mobile
+add action=mark-routing chain=prerouting comment="Minecraft - Mobile" new-routing-mark=routing-game passthrough=no dst-port=25565,19132-19133 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=25565,19132-19133 protocol=udp
+# Mobile Legends - Mobile
+add action=mark-routing chain=prerouting comment="Mobile Legends - Mobile" new-routing-mark=routing-game passthrough=no dst-port=5000-5221,5224-5227,5229-5241,5243-5508,5551-5559,5601-5700,9000-9010,9443 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=5520-5529,10003,30000-30300,8443 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=4001-4009,5000-5221,5224-5241,5243-5509,5551-5559,5601-5700,8130,8443,9120 protocol=udp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=2702,3702,5517,5520-5529,8001,9000-9010,9992,10003,30000-30300 protocol=udp
+# Naruto Little Ninja (China) - Mobile
+add action=mark-routing chain=prerouting comment="Naruto Little Ninja (China) - Mobile" new-routing-mark=routing-game passthrough=no dst-port=6170-6180 protocol=tcp
+# Point Blank - Mobile
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=44590-44610 protocol=tcp
+add action=mark-routing chain=prerouting comment="Point Blank - Mobile" new-routing-mark=routing-game passthrough=no dst-port=40000-40010 protocol=udp
+# PUBG - Mobile
+add action=mark-routing chain=prerouting comment="PUBG - Mobile" new-routing-mark=routing-game passthrough=no dst-port=7889,10012,13004,14000,17000,17500,18081,20000-20002,20371 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=8011,9030,10491,10612,12235,13004,13748,17000,17500,20000-20002 protocol=udp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=7086-7995,10039,10096,11455,12070-12460,13894,13972,41182-41192 protocol=udp
+# Roblox - Mobile
+add action=mark-routing chain=prerouting comment="Roblox - Mobile" new-routing-mark=routing-game passthrough=no dst-port=3074 protocol=tcp
+add action=mark-routing chain=prerouting new-routing-mark=routing-game passthrough=no dst-port=88,500,3074,3544,4500,49152-65535 protocol=udp
+```
